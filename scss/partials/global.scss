@@ -271,9 +271,8 @@ h2{
 .seccion--nosotros{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: 1fr;
     grid-template-areas:
-    "imagen"
     "mapa"
     ;
     align-items: center;
@@ -283,34 +282,34 @@ h2{
     }
 
 }
-.imagen{
-    grid-area: imagen;
-    background-image:url("/img/fondo_nosotros.jpg");
-    background-size: cover;
-    background-position: center;
-    width:100%;
-    min-height: 80vh;
-}
-.conteinImg{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align:center;
-    padding:2%;
-    h3{
-        font-size: 2rem;
-        color:white;
-        text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
-    
-    }
-    span{
-        color: white;
-        width:100%;
-        font-size: 1rem;
-        text-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
-        padding:2%;
-    }
-}
+//.imagen{
+//    grid-area: imagen;
+//    background-image:url("./fondo_nosotros.jpg");
+//    background-size: cover;
+//    background-position: center;
+//    width:100%;
+//    min-height: 80vh;
+//}
+//.conteinImg{
+//    display:flex;
+//    flex-direction: column;
+//    justify-content: center;
+//    text-align:center;
+//    padding:2%;
+//    h3{
+//        font-size: 2rem;
+//        color:white;
+//        text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+//    
+//    }
+//    span{
+//        color: white;
+//        width:100%;
+//        font-size: 1rem;
+//        text-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
+//        padding:2%;
+//    }
+//}
 .containMapa{
     grid-area: mapa;   
     .mapa{
