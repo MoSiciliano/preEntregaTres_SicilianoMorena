@@ -11,6 +11,7 @@ const actualizarNumeroCarrito = () =>{
 actualizarNumeroCarrito();
 
 const pintarCarrito = () =>{
+    modalContainer.innerHTML= "";
     //header del modal
     if (carritoConProductos.length === 0) {
 
@@ -33,7 +34,7 @@ const pintarCarrito = () =>{
 
 
     } else {
-        modalContainer.innerHTML = ``;
+       
         modalContainer.style.display  = "flex";
 
         const modalHeader = document.createElement("div");
