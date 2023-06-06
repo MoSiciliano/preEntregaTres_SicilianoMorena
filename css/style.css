@@ -97,6 +97,14 @@ nav {
   display: none;
 }
 
+.disabled {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
 /*modal content*/
 .modal--contenedor {
   width: 80%;
@@ -107,6 +115,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: fixed;
   /*for the top*/
   position: fixed;
   overflow: auto;
@@ -125,6 +134,7 @@ nav {
 
 .modal--header--titulo {
   justify-self: start;
+  font-size: 2rem;
 }
 
 .modal--header--boton {
@@ -152,11 +162,51 @@ nav {
   width: 120px;
 }
 
-.total-contenedor {
-  font-size: 25px;
-  padding: 20px;
-  text-align: center;
-  padding-top: 20px;
+.modal--footer {
+  background-color: rgb(250, 236, 225);
+  color: black;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2fr, 2fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "vaciar  comprar" "formulario formulario";
+  align-items: normal;
+}
+
+.contenedor--boton--vaciar--carrito {
+  grid-area: vaciar;
+  margin: 2%;
+}
+.contenedor--boton--vaciar--carrito .boton--vaciar--carrito {
+  margin-top: 2%;
+  margin-left: 4%;
+}
+
+.contenedor--boton--comprar--carrito {
+  grid-area: comprar;
+}
+
+.contenedor--boton--comprar {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.contenedor--boton--comprar .boton--comprar--carrito {
+  background-color: rgb(255, 156, 131);
+  color: black;
+  border: 2cm;
+  border-radius: 2%;
+  border-color: white;
+  margin: 2%;
+}
+
+.total--pagar--carrito {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 4%;
 }
 
 .carrito--vacio {
@@ -172,15 +222,18 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   font-size: 2rem;
   width: 90%;
-  margin: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  max-height: 90%;
 }
 
-.eliminar--producto {
-  cursor: pointer;
+.boton--eliminar--producto, .boton--vaciar--carrito {
+  background-color: transparent;
   color: red;
+  border: none;
 }
 
 .restar {
@@ -189,6 +242,28 @@ nav {
 
 .sumar {
   cursor: pointer;
+}
+
+.formulario--comprar {
+  width: 100%;
+  background-color: rgb(255, 156, 131);
+}
+.formulario--comprar .form {
+  color: white;
+  grid-area: formulario;
+}
+.formulario--comprar .btn--contain--formulario {
+  display: flex;
+  justify-content: center;
+}
+.formulario--comprar .btn--contain--formulario .btn--formulario {
+  background-color: rgb(250, 236, 225);
+  color: black;
+  border: 2cm;
+  border-radius: 2%;
+  border-color: white;
+  margin: 2%;
+  font-size: 1.5rem;
 }
 
 main {
@@ -246,47 +321,23 @@ h2 {
 
 .card {
   background-color: rgb(241, 222, 207);
+  transition: 1s;
+}
+.card:hover {
+  transform: scale(1.1);
+  filter: brightness(0.6);
 }
 
 .seccion--nosotros {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, auto);
-  grid-template-areas: "imagen" "mapa";
+  grid-template-rows: 1fr;
+  grid-template-areas: "mapa";
   align-items: center;
   margin-top: 2%;
 }
 .seccion--nosotros .imgNos {
   width: 500px;
-}
-
-.imagen {
-  grid-area: imagen;
-  background-image: url("/img/fondo_nosotros.jpg");
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  min-height: 80vh;
-}
-
-.conteinImg {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding: 2%;
-}
-.conteinImg h3 {
-  font-size: 2rem;
-  color: white;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
-}
-.conteinImg span {
-  color: white;
-  width: 100%;
-  font-size: 1rem;
-  text-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
-  padding: 2%;
 }
 
 .containMapa {
@@ -320,9 +371,9 @@ h2 {
   margin-top: 5%;
   margin-bottom: 2%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas: "title title formu" "texto texto formu" "texto texto formu";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "title" "texto" "texto";
   padding: 2%;
 }
 
@@ -338,13 +389,10 @@ h2 {
   justify-items: center;
 }
 
-.form {
-  grid-area: formu;
-  justify-items: start;
-}
-
 footer {
   grid-area: footer;
+  padding: 0;
+  width: 100%;
 }
 
 .footer {

@@ -1,0 +1,67 @@
+[
+    {
+      "id": "001-b",
+     "nombrePrincipal": "vanitory nordico L",
+      "precio": 25000,
+      "imagen": "./img/baño/baño-01.webp",
+      "seccion": "baño",
+      "cantidad": 1
+    },
+    {
+      "id": "002-b",
+     "nombrePrincipal": "vanitory nordico XS",
+      "precio": 30000,
+      "imagen": "./img/baño/baño-02.webp",
+      "seccion": "baño",
+      "cantidad": 1
+    },
+    {
+      "id": "003-b",
+     "nombrePrincipal": "vanitory nórdico XL",
+      "precio": 25000,
+      "imagen": "./img/baño/baño-03.webp",
+      "seccion": "baño",
+      "cantidad": 1
+    },
+    {
+      "id": "001-h",
+     "nombrePrincipal": "Cajonera nórdica",
+      "precio": 25000,
+      "imagen": "./img/habitacion/habitacion-01.webp",
+      "seccion": "habitacion",
+      "cantidad": 1
+    },
+    {
+      "id": "002-h",
+     "nombrePrincipal": "Mesa de luz",
+      "precio": 12000,
+      "imagen": "./img/habitacion/habitacion-02.webp",
+      "seccion": "habitacion",
+      "cantidad": 1
+    },
+    {
+      "id": "001-l",
+     "nombrePrincipal": "Mesa ratona escandinava",
+      "precio": 15000,
+      "imagen": "./img/living/living-01.webp",
+      "seccion": "living",
+      "cantidad": 1
+    },
+    {
+      "id": "002-l",
+     "nombrePrincipal": "Mesa para Tv XL",
+      "precio": 50000,
+      "imagen": "./img/living/living-02.webp",
+      "seccion": "living",
+      "cantidad": 1
+    },
+    {
+      "id": "003-l",
+     "nombrePrincipal": "Mesa de Tv Nórdica",
+      "precio": 35000,
+      "imagen": "./img/living/living-03.webp",
+      "seccion": "living",
+      "cantidad": 1
+    }
+]
+  
